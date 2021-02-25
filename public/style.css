@@ -18,9 +18,9 @@ body {
     text-transform: uppercase;
 }
 .HomeHeader h1 {
-    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     text-align: center;
+    color: #3e3e3e;
 }
 .HomeHeader button {
     position: absolute;
