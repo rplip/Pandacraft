@@ -19,6 +19,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 class ProductsController extends AbstractController
 {
     /**
+     * Affichage liste des produits
      * @Route("/products/list", name="productsList", methods={"GET"})
      */
     public function list(ProductsRepository $productsRepository,Request $request, SerializerInterface $serializer): Response
@@ -41,6 +42,7 @@ class ProductsController extends AbstractController
     }
 
     /**
+     * Ajout d'un produit
      * @Route("/products/add", name="productAdd")
      */
     public function add(ProductlinesRepository $plr, Request $request) {
@@ -95,7 +97,16 @@ class ProductsController extends AbstractController
         ));
     }
 
+
+    /* Précision :
+                    Les routes comportant un {id} sont placées après
+                    sinon elle interceptent les demandes
+                    (exemple le /products/add, "add" passe pour un id)
+    */
+
+
     /**
+     * Affichage d'un produit
      * @Route("/products/{id}", name="productItem", methods={"GET"})
      */
     public function item(string $id, ProductsRepository $pr,Request $request, SerializerInterface $serializer)
@@ -117,6 +128,7 @@ class ProductsController extends AbstractController
     }
 
     /**
+     * Supression d'un produit
      * @Route("/products/{id}/delete", name="productItemDelete")
      */
     public function delete(string $id, Request $request, SerializerInterface $serializer, ProductsRepository $pr)
@@ -140,6 +152,7 @@ class ProductsController extends AbstractController
     }
 
     /**
+     * Modification d'un produit
      * @Route("/products/{id}/update", name="productItemUpdate")
      */
     public function update(string $id, ProductsRepository $pr,ProductlinesRepository $plr, Request $request)

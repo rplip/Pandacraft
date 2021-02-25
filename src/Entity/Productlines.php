@@ -48,6 +48,8 @@ class Productlines
         return $this->productline;
     }
 
+
+    /*Méthode qui permet d'afficher le nom des catégories, sinon on a une erreur */
     public function __toString()
     {
         return $this->productline;
