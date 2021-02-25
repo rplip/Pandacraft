@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+        {% block body %}
+            <div class="globalList">
+                {% for data in datas %}
+                        <div class="model">
+                            <a href="{{data.productcode}}">
+                                <div class="name">{{ data.productname}}</div>
+                                <div class="vendor">
+                                    <div class="label">Vendeur</div>
+                                    <div>{{ data.productvendor}}</div>
+                                </div>
+                                <div class="scale">
+                                    <div class="label">Echelle</div>
+                                    <div>{{ data.productscale}}</div>
+                                </div>
+                                <div class="stock">
+                                    <div class="label">Stock</div>
+                                    <div>{{ data.quantityinstock}}</div>
+                                </div>
+                                <div class="price">
+                                    <div class="label">PA</div>
+                                    <div>{{ data.buyprice}}€</div>
+                                </div>
+                                <div class="msrp">
+                                    <div class="label">PVC</div>
+                                    <div>{{ data.msrp}}€</div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                {% endfor %}
+                {% if delete == true %}
+                    <div class="delete-popup disapear">
+                        <a href="#" title="Fermer" class="popup"></a>
+                        <h2>Merci.</h2>
+                        <p>Produit supprimé</p>
+                    </div>
+                {% endif %}
+                <button class="back"><a href="/">Retour</a></button>
+            </div>
+        {% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+        {% block body %}
+            <div class="product">
+                {% if success == true %}
+                    <div class="thanks-popup">
+                        <a href="#" title="Fermer" class="popup"></a>
+                        <h2>Merci.</h2>
+                        <p>Votre demande a été transmise.</p>
+                        <p>Le produit sera ajouté dans les plus bref délais</p>
+                        <div>
+                            <a href="list">Souhaitez vous voir la liste des produits ?</a>
+                        </div>
+                    </div>
+
+                {% endif %}
+                {{ form_start(form) }}
+                    <h2>Ajouter un nouveau produit</h2>
+                    {{ form_widget(form) }}
+                {{ form_end(form) }}
+                <button class="back"><a href="/">Retour</a></button>
+            </div>
+
+            
+        {% endblock %}
+

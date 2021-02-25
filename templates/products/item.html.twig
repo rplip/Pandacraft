@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+        {% block body %}
+        {% if edit == true %}
+                    <div class="edit-popup disapear">
+                        <a href="#" title="Fermer" class="popup"></a>
+                        <h2>Merci.</h2>
+                        <p>Votre demande a été transmise.</p>
+                        <p>Le produit est modifié</p>
+                    </div>
+        {% endif %}
+            <div class="item">
+                        <div class="model editable">
+                                <div class="name">{{ product.productname}}</div>
+                                <div class="vendor">
+                                    <div class="label">Vendeur</div>
+                                    <div>{{ product.productvendor}}</div>
+                                </div>
+                                <div class="scale">
+                                    <div class="label">Echelle</div>
+                                    <div>{{ product.productscale}}</div>
+                                </div>
+                                <div class="line">
+                                    <div class="label">Catégorie</div>
+                                    <div>{{ product.productline}}</div>
+                                </div>
+                                <div class="description">
+                                    <div class="label">Description du produit</div>
+                                    <div>{{ product.productdescription}}</div>
+                                </div>
+                                <div class="stock">
+                                    <div class="label">Stock</div>
+                                    <div>{{ product.quantityinstock}}</div>
+                                </div>
+                                <div class="price">
+                                    <div class="label">PA</div>
+                                    <div>{{ product.buyprice}}€</div>
+                                </div>
+                                <div class="msrp">
+                                    <div class="label">PVC</div>
+                                    <div>{{ product.msrp}}€</div>
+                                </div>
+                        </div>
+                        <div class="form editable">
+                            {{ form_start(form) }}
+                                <h2>Modifiez le produit</h2>
+                                {{ form_widget(form) }}
+                            {{ form_end(form) }}
+                        </div>
+                <button class="back"><a href="/products/list">Retour</a></button>
+                <button class="add"><a href="/products/add">Nouveau produit</a></button>
+                <button class="delete"><a href="/products/{{ id }}/delete">Supprimer produit</a></button>
+                <button class="edit" id="editButton">Modifier produit</button>
+
+
+            </div>
+        {% endblock %}

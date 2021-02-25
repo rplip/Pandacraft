@@ -1,0 +1,387 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.dnone {
+    display: none !important;
+}
+.HomeHeader {
+    background-image: url(/images/vw-2070575.jpg);
+    height: 98vh;
+    background-size: cover;
+    background-position-y: center;
+    color: #fff;
+    justify-content: center;
+    align-items: baseline;
+    display: flex;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.HomeHeader h1 {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+}
+.HomeHeader button {
+    position: absolute;
+    top: 30%;
+    padding: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(0,0,0, 0.1);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.HomeHeader button a {
+    color: #fff;
+    text-decoration: inherit;
+}
+.HomeHeader button:hover {
+    background-color: rgba(0,0,0, 0.8);
+    transition: all 0.5s ease;
+}
+.HomeHeader button.list {
+    left: 10%;
+}
+.HomeHeader button.addItem {
+    right: 10%;
+}
+.product {
+    background-image: url(/images/auto-2583230.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 98vh;
+    display: flex;
+    justify-content: flex-end;
+}
+button.back, button.add, button.delete, button.edit {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    padding: 2rem;
+    width: 250px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    left: 0;
+    margin: 1rem;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+button.back:hover, button.add:hover {
+    background-color: rgba(0,0,0,0.8);
+    transition: all 0.5s ease;
+}
+button.back a, button.add a, button.delete a {
+    color: #fff;
+    text-decoration: inherit;
+}
+button.add {
+    right: 0;
+    left: inherit;
+    background-color: rgba(120, 213, 85, 0.4);
+    transition: all 500ms ease;
+}
+button.add:hover{
+    background-color: rgba(120, 213, 85, 0.9);
+    transition: all 500ms ease;
+}
+button.delete {
+    left: inherit;
+    right: 600px;
+    background-color: rgba(244, 56, 56, 0.4);
+    width: 250px;
+    transition: all 500ms ease;
+}
+button.delete:hover {
+    background-color: rgba(244, 56, 56, 0.9);
+    transition: all 500ms ease;
+}
+button.edit {
+    left: inherit;
+    top: inherit;
+    bottom: 0;
+    right: 300px;
+    transition: all 500ms ease;
+    background-color: rgba(50, 123, 236, 0.4);
+}
+button.edit:hover {
+    background-color: rgba(50, 123, 236, 0.9);
+    transition: all 500ms ease;
+}
+form {
+    background-color: #fff;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    min-width: 550px;
+}
+form h2 {
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    color: #3e3e3e;
+    text-transform: uppercase;
+}
+form ul {
+    list-style-type: none;
+    position: absolute;
+    right: 40px;
+    color: white;
+    background-color: #e15151;
+    padding: 0.5rem;
+}
+form div#product_add {
+    padding: 1rem;
+    width: auto;
+}
+form div#product_add div {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+form div#product_add div:last-child {
+    justify-content: center;
+}
+form div#product_add label {
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0rem;
+    display: flex;
+    align-items: center;
+    color: #3e3e3e;
+    width: 130px;
+}
+form div#product_add input, form div#product_add select, form div#product_add textarea {
+    padding: 1rem;
+    background-color: #f2f2f2;
+}
+form div#product_add textarea {
+    height: 100px;
+    width: 300px;
+}
+form div#product_add button {
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #3e3e3e;
+    cursor: pointer;
+}
+.thanks-popup {
+    position: absolute;
+    width: 33%;
+    left: 1rem;
+    background-color: rgba(255,255,255,0.6);
+    top: 1rem;
+    text-align: center;
+    padding: 0 2rem 2rem;
+}
+.delete-popup {
+    position: absolute;
+    width: 13%;
+    background-color: rgba(32, 142, 44, 0.6);
+    color: #fff;
+    left: 1rem;
+    top: 1rem;
+    text-align: center;
+    padding: 0 2rem 2rem;
+}
+.edit-popup {
+    position: absolute;
+    width: 33%;
+    left: 1rem;
+    background-color: rgba(255,255,255,0.6);
+    top: 1rem;
+    text-align: center;
+    padding: 0 2rem 2rem;
+}
+.thanks-popup a {
+    text-decoration: none;
+    color: #ea4c27;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.thanks-popup a:hover:after {
+    transform: scalex(1);
+}
+.thanks-popup a:after {
+    transition: 0.25s ease;
+    content: "";
+    display: block;
+    width: 87%;
+    height: 2px;
+    background-color: currentcolor;
+    transform: scalex(0);
+    position: absolute;
+}
+.globalList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-image: url(/images/vw-6010382.jpg);
+    background-size: cover;
+    height: 98vh;
+    overflow: auto;
+}
+.model {
+    width: 25%;
+    text-align: center;
+    margin: 1%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+.model a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: inherit;
+    color: #3e3e3e;
+    transition: all 500ms ease;
+}
+.model:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 500ms ease;
+}
+.model a:hover {
+    color: #f2f2f2;
+    transition: all 500ms ease;
+}
+.model a:visited {
+    color: crimson;
+}
+.model .name {
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.8);
+    color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+}
+.model .stock, .model .price, .model .msrp, .model .vendor, .model .scale, .model .line {
+    width: 33%;
+    padding: 1rem 0rem;
+}
+.model .description {
+    width: 100%;
+    padding: 2rem;
+}
+.model .label {
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+}
+.item {
+    background-image: url(/images/vw-1281715.jpg);
+    background-size: cover;
+    height: 98vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    overflow: hidden;
+}
+.item .model {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-size: 2rem;
+    transition: all 500ms ease;
+}
+.item .model:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 500ms ease;
+}
+.item .model .label {
+    font-weight: bold;
+}
+.item .model.edition {
+    width: 28%;
+    font-size: 1.5rem;
+    transition: all 500ms ease;
+}
+.item .form {
+    transform: translateX(100%);
+    width: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
+}
+.item .form.edition {
+    width: 60%;
+    margin: 1%;
+    margin-right: 4%;
+    transform: translateX(0%);
+    transition: all 500ms ease;
+}
+.item .form.edition form {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    min-width: 550px;
+    padding-top: 2rem;
+}
+form div#product_edit {
+    padding: 1rem;
+    width: auto;
+}
+form div#product_edit div {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+form div#product_edit div:last-child {
+    justify-content: flex-end;
+}
+form div#product_edit label {
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0rem;
+    display: flex;
+    align-items: center;
+    color: #3e3e3e;
+    width: 250px;
+    justify-content: flex-end;
+}
+form div#product_edit input {
+    padding: 1rem;
+    background-color: #f2f2f2;
+}
+form div#product_edit textarea {
+    width: 300px;
+    height: 100px;
+    padding: 1rem;
+}
+form div#product_edit button {
+    color: #3e3e3e;
+    background-color: rgba(233, 233, 233, 0.9);
+    padding: 0.5rem;
+    width: 9rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+form div#product_edit button:hover {
+    background-color: rgba(53, 53, 53, 0.9);
+    color: #f2f2f2;
+    transition: all 500ms ease;
+}
